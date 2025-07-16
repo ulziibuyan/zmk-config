@@ -20,4 +20,6 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: tg4x
+    shield: splitkb_aurora_corne_left
+  - board: nice_nano_v2
+    shield: splitkb_aurora_corne_right
