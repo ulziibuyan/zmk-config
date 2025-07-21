@@ -266,6 +266,14 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            key-positions = <0 18>;
+            bindings = <&kp ESC>;
+        };
+    };
+
     // LAYERS
     conditional_layers {
         compatible = "zmk,conditional-layers";
