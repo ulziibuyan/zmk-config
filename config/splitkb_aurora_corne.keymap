@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/rgb.h>
 
 #define BASE 0
 #define NAV 1
@@ -278,20 +279,20 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// |TAB:ESC   | ; : | , < | . > |  P  |  Y  |         | F   |  G   |  C  |  R  |  L  | BKSP |
-// | CTRL     |  A  |  O  |  E  |  U  |  I  |         |  D  |  H   |  T  |  N  |  S  |  DEL |
+// | TAB:ESC  | ; : | , < | . > |  P  |  Y  |         | F   |  G   |  C  |  R  |  L  | BKSP |
+// | CTRL     |  A  |  O  |  E  |  U  |  I  |         |  D  |  H   |  T  |  N  |  S  | DEL  |
 // | LSFT:CAP |' "  | q @ | J   | K   |  X  |         |  B  |  M   |  W  |  V  |  Z  | TAB  |
 //                        | GUI | LWR | SPC |         | ENT | RSE  | ALT |
                         bindings = <
    TD_TAB     TD_SCLN  TD_COMM TD_DOT &kp P &kp Y                   &kp F &kp G  &kp C     &kp R   &kp L    &kp BSPC
    &kp LCTRL  &kp A    &kp O   &kp E  &kp U &kp I                   &kp D &kp H  &kp T     &kp N   &kp S    &kp DEL
    TD_SCLOCK TD_QUOTE TD_ARR   &kp J  &kp K &kp X                   &kp B &kp M  &kp W     &kp V   &kp Z    TD_TAW
-                               TD_ALT  &mo 1 TD_SPC                 TD_SPC &mo 2 &kp RALT
+                               TD_ALT &mo 1 TD_SPC                  TD_SPC &mo 2 &kp RALT
                         >;
                 };
                 lower_layer {
 // -----------------------------------------------------------------------------------------
-// |  ESC   |  7   |  5  |  3  |  1  |  9  |            |  0  |  2  |  4  |  6  |  8  |      |
+// | ESC    |  7   |  5  |  3  |  1  |  9  |            |  0  |  2  |  4  |  6  |  8  |      |
 // | F11    |  F1  |  F2 |  F3 |  F4 |  F5 |            | LFT | DWN |  UP | RGT |     |      |
 // | SHFT   |  F6  |  F7 |  F8 |  F9 |  F10|            |HOME | PGDN| PGUP| END |     |      |
 //                       |     |     |     |            |     |     |     |
@@ -305,15 +306,15 @@
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
-// |  ESC |  [  |  {  |  }  |  (  |  =  |       |  *  |  )  |  +  |  ]  |  !  | DEL  |
+// | ESC  |  [  |  {  |  }  |  (  |  =  |       |  *  |  )  |  +  |  ]  |  !  | DEL  |
 // | CTRL |  ~  |  %  |  `  | / ? | @ ^ |       |     |     |     |     |     |      |
 // | SHFT |  $  |  &  |  #  | - _ | \ | |       |     |     |     |     |     |      |
 //                    | GUI |     | SPC |       | ENT |     | ALT |
                         bindings = <
-   &trans     &kp LBKT    &kp LBRC     &kp RBRC     &kp LPAR    &kp EQUAL       &kp STAR    &kp RPAR  &kp PLUS  &kp RBKT  &kp EXCL   &trans    
-   &kp LCTRL  &kp TILDE   &kp PRCNT    &kp GRAVE    TD_SLSH     TD_ATCAT        &trans      &trans    &trans    &trans    &trans     &trans
-   &trans     &kp DLLR    &kp AMPS     &kp HASH     TD_MINUS    TD_BSLS         &trans      &trans    &trans    &trans    &trans     &trans
-                    	               &trans       &trans      &trans          &trans      &trans    &trans
+   &trans     &kp LBKT    &kp LBRC     &kp RBRC     &kp LPAR    &kp EQUAL       &kp STAR        &kp RPAR        &kp PLUS        &kp RBKT        &kp EXCL        &trans    
+   &kp LCTRL  &kp TILDE   &kp PRCNT    &kp GRAVE    TD_SLSH     TD_ATCAT        &rgb_ug RGB_SAI &rgb_ug RGB_BRI &rgb_ug RGB_BRD &rgb_ug RGB_SAD &rgb_ug RGB_TOG &trans
+   &trans     &kp DLLR    &kp AMPS     &kp HASH     TD_MINUS    TD_BSLS         &trans          &trans          &trans          &trans          &trans          &trans
+                    	               &trans       &trans      &trans          &trans          &trans          &trans
                         >;
                 };
 
