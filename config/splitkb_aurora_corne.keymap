@@ -277,9 +277,12 @@
     combos {
         compatible = "zmk,combos";
         combo_esc {
-            key-positions = <LT4 LH0>;
+            key-positions = <LH0 LT4>;
             bindings = <&kp ESC>;
         };
+        combo_tab {
+            key-positions = <RH0 RT4>;
+            bindings = <&kp TAB>;
     };
 
     // LAYERS
