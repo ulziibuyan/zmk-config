@@ -281,8 +281,12 @@
             bindings = <&kp ESC>;
         };
         combo_tab {
-            key-positions = <RH0 RT4>;
+            key-positions = <LH0 LM4>;
             bindings = <&kp TAB>;
+        };
+        combo_backspace {
+            key-positions = <RH0 RT4>;
+            bindings = <&kp BKSP>;
         };
     };
 
