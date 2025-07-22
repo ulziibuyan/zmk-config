@@ -70,6 +70,12 @@
 };
 
 / {
+  chosen {
+    zmk,matrix_transform = &five_column_transform;
+  };
+};
+
+/ {
 
 
     behaviors{  
