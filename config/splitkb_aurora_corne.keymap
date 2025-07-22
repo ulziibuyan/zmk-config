@@ -283,6 +283,7 @@
         combo_tab {
             key-positions = <RH0 RT4>;
             bindings = <&kp TAB>;
+        };
     };
 
     // LAYERS
