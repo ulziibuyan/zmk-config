@@ -277,7 +277,7 @@
     combos {
         compatible = "zmk,combos";
         combo_esc {
-            key-positions = <LH0 LT4>;
+            key-positions = <LH0 LT3>;
             bindings = <&kp ESC>;
         };
         combo_tab {
@@ -285,7 +285,7 @@
             bindings = <&kp TAB>;
         };
         combo_backspace {
-            key-positions = <RH0 RT4>;
+            key-positions = <RH0 RT3>;
             bindings = <&kp BKSP>;
         };
     };
