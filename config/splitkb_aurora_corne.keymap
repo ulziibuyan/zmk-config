@@ -280,6 +280,10 @@
             key-positions = <LH0 LT3>;
             bindings = <&kp ESC>;
         };
+        combo_space {
+            key-positions = <LH0 RH0>;
+            bindings = <&kp ENTER>;
+        };
         combo_tab {
             key-positions = <LH0 LM4>;
             bindings = <&kp TAB>;
