@@ -283,11 +283,11 @@
         combo_control_l {
             key-positions = <LH0 LB4>;
             bindings = <&mt LCONTROL>;
-        }
+        };
         combo_control_r {
             key-positions = <RH0 RB4>;
             bindings = <&mt RCONTROL>;
-        }
+        };
         combo_esc {
             key-positions = <LH0 LT3>;
             bindings = <&kp ESC>;
@@ -295,11 +295,11 @@
         combo_shift_l {
             key-positions = <LH0 LT4>;
             bindings = <&mt LSHIFT>;
-        }
+        };
         combo_shift_r {
             key-positions = <RH0 RT4>;
             bindings = <&mt RSHIFT>;
-        }
+        };
         combo_space {
             key-positions = <LH0 RH0>;
             bindings = <&kp ENTER>;
