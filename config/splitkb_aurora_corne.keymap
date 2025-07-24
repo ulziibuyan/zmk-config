@@ -282,11 +282,11 @@
         };
         combo_control_l {
             key-positions = <LH0 LB4>;
-            bindings = <&mt LCONTROL>;
+            bindings = <&mt LCTRL>;
         };
         combo_control_r {
             key-positions = <RH0 RB4>;
-            bindings = <&mt RCONTROL>;
+            bindings = <&mt RCTRL>;
         };
         combo_esc {
             key-positions = <LH0 LT3>;
