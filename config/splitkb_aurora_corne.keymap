@@ -280,6 +280,14 @@
             key-positions = <RH0 RT3>;
             bindings = <&kp BKSP>;
         };
+        combo_control_l {
+            key-positions = <LH0 LB4>;
+            bindings = <&mt LCONTROL>;
+        }
+        combo_control_r {
+            key-positions = <RH0 RB4>;
+            bindings = <&mt RCONTROL>;
+        }
         combo_esc {
             key-positions = <LH0 LT3>;
             bindings = <&kp ESC>;
