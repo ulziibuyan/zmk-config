@@ -276,10 +276,6 @@
 
     combos {
         compatible = "zmk,combos";
-        combo_backspace {
-            key-positions = <RH0 RT3>;
-            bindings = <&kp BKSP>;
-        };
         combo_control_l {
             key-positions = <LH0 LB4>;
             bindings = <&kp LCTRL>;
