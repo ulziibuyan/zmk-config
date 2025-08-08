@@ -288,6 +288,10 @@
             key-positions = <RH0 RT4>;
             bindings = <&kp BKSP>;
         };
+        combo_bootloader {
+            key-positions = <LB4 LT4 LT2 LT0 LH0>;
+            bindings = <&bootloader>;
+        };
     };
 
     // LAYERS
