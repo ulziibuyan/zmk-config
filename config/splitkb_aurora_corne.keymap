@@ -276,6 +276,10 @@
 
     combos {
         compatible = "zmk,combos";
+        combo_bootloader {
+            key-positions = <LB4 LT4 LT2 LT0 LH0>;
+            bindings = <&bootloader>;
+        };
         combo_esc {
             key-positions = <LH0 LT4>;
             bindings = <&kp ESC>;
@@ -283,10 +287,6 @@
         combo_tab {
             key-positions = <LH0 LM4>;
             bindings = <&kp TAB>;
-        };
-        combo_bootloader {
-            key-positions = <LB4 LT4 LT2 LT0 LH0>;
-            bindings = <&bootloader>;
         };
         combo_backspace {
             key-positions = <RH0 RT4>;
