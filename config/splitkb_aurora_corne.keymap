@@ -88,6 +88,15 @@
 	    	       <&kp F>, <&kp F>,
 		       <&bootloader>;
             };
+        td_LT0: tap_dance_LT0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_LT0";
+            #binding-cells = <0>;
+            tapping-term-ms = <TAP_SPEED>;
+            bindings = <&kp Y>, <&kp Y>,
+                       <&kp Y>, <&kp Y>,
+			<&bootloader>;
+            };
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_0"; 
@@ -340,7 +349,7 @@
 // | LSFT:CAP |' "  | q @ | J   | K   |  X  |         |  B  |  M   |  W  |  V  |  Z  | TAB  |
 //                        | GUI | LWR | SPC |         | ENT | RSE  | ALT |
                         bindings = <
-   TD_SCLN  TD_COMM TD_DOT &kp P &kp Y                   &td_RT0 &kp G  &kp C     &kp R   &kp L
+   TD_SCLN  TD_COMM TD_DOT &kp P &td_LT0                 &td_RT0 &kp G  &kp C     &kp R   &kp L
    &kp A    &kp O   &kp E  &kp U &kp I                   &kp D &kp H  &kp T     &kp N   &kp S
    TD_QUOTE TD_ARR  &kp J  &kp K &kp X                   &kp B &kp M  &kp W     &kp V   &kp Z
                    TD_ALT &mo 1 TD_SPC                  TD_SPC &mo 2  &kp RIGHT_META
