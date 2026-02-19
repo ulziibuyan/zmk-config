@@ -329,6 +329,10 @@
             key-positions = <LH0 LM4>;
             bindings = <&kp TAB>;
         };
+	combo_studio_unlock {
+	    layers = <3>;
+	    key-positions = <RB4 RB1 LB1>;
+	    bindings = <&studio_unlock>;
     };
 
     // LAYERS
