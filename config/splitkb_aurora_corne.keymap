@@ -333,6 +333,7 @@
 	    layers = <3>;
 	    key-positions = <RB4 RB1 LB1>;
 	    bindings = <&studio_unlock>;
+	};
     };
 
     // LAYERS
