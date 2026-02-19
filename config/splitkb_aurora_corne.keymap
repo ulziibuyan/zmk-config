@@ -358,6 +358,7 @@
    TD_QUOTE TD_ARR  &kp J  &kp K &kp X                   &kp B &kp M  &kp W     &kp V   &kp Z
                    TD_ALT &mo 1 TD_SPC                  TD_SPC &mo 2  &kp RIGHT_META
                         >;
+		  sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
                 };
                 lower_layer {
 // -----------------------------------------------------------------------------------------
@@ -388,7 +389,7 @@
                 };
 
 
-// bt_media_layer: BT functions and media controls
+ // bt_media_layer: BT functions and media controls
                 bt_media_layer {
 // -----------------------------------------------------------------------------------------
 // |  ESC |     |     |     |     |     |   |         |     |         |     |   |      |
