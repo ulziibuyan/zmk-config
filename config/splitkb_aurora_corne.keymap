@@ -78,14 +78,31 @@
 / {
 
 
-    behaviors{  
+    behaviors{
+	td_RT0: tap_dance_RT0 {
+	    compatible = "zmk,behavior-tap-dance";
+	    label = "TAP_DANCE_RT0";
+	    #binding-cells = <0>;
+            tapping-term-ms = <TAP_SPEED>;
+            bindings = <&kp F>, <&kp F>,
+	    	       <&kp F>, <&kp F>,
+		       <&bootloader>;
+            };
+        td_LT0: tap_dance_LT0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_LT0";
+            #binding-cells = <0>;
+            tapping-term-ms = <TAP_SPEED>;
+            bindings = <&kp Y>, <&kp Y>,
+                       <&kp Y>, <&kp Y>,
+			<&bootloader>;
+            };
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_0"; 
             #binding-cells = <0>; 
             tapping-term-ms = <TAP_SPEED>; 
             bindings = <&kp TAB>, <&kp ESC>;
-
             }; 
         td1: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
@@ -276,17 +293,41 @@
 
     combos {
         compatible = "zmk,combos";
+        combo_backspace {
+            key-positions = <RH0 RT3>;
+            bindings = <&kp BKSP>;
+        };
+        combo_bootloader {
+            key-positions = <LB4 LT4 LT2 LT0 LH0>;
+            bindings = <&bootloader>;
+        };
+        combo_control_l {
+            key-positions = <LH0 LB4>;
+            bindings = <&kp LCTRL>;
+        };
+        combo_control_r {
+            key-positions = <RH0 RB4>;
+            bindings = <&kp RCTRL>;
+        };
         combo_esc {
-            key-positions = <LH0 LT4>;
+            key-positions = <LH0 LT3>;
             bindings = <&kp ESC>;
+        };
+        combo_shift_l {
+            key-positions = <LH0 LT4>;
+            bindings = <&kp LSHIFT>;
+        };
+        combo_shift_r {
+            key-positions = <RH0 RT4>;
+            bindings = <&kp RSHIFT>;
+        };
+        combo_space {
+            key-positions = <LH0 RH0>;
+            bindings = <&kp ENTER>;
         };
         combo_tab {
             key-positions = <LH0 LM4>;
             bindings = <&kp TAB>;
-        };
-        combo_backspace {
-            key-positions = <RH0 RT4>;
-            bindings = <&kp BKSP>;
         };
     };
 
@@ -308,7 +349,7 @@
 // | LSFT:CAP |' "  | q @ | J   | K   |  X  |         |  B  |  M   |  W  |  V  |  Z  | TAB  |
 //                        | GUI | LWR | SPC |         | ENT | RSE  | ALT |
                         bindings = <
-   TD_SCLN  TD_COMM TD_DOT &kp P &kp Y                   &kp F &kp G  &kp C     &kp R   &kp L
+   TD_SCLN  TD_COMM TD_DOT &kp P &td_LT0                 &td_RT0 &kp G  &kp C     &kp R   &kp L
    &kp A    &kp O   &kp E  &kp U &kp I                   &kp D &kp H  &kp T     &kp N   &kp S
    TD_QUOTE TD_ARR  &kp J  &kp K &kp X                   &kp B &kp M  &kp W     &kp V   &kp Z
                    TD_ALT &mo 1 TD_SPC                  TD_SPC &mo 2  &kp RIGHT_META
@@ -352,7 +393,7 @@
 //                    | GUI |     | SPC |   | ENT     |     | ALT |
                         bindings = <
    &trans       &trans       &trans       &trans       &trans                &trans          &trans         &trans       &trans     &trans
-   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4          &kp LEFT        &kp C_PREV     &kp C_PP     &kp C_NEXT &trans
+   &bt BT_CLR &bt BT_SEL 4 &bt BT_SEL 3 &bt BT_SEL 2 &bt BT_SEL 1          &kp LEFT        &kp C_PREV     &kp C_PP     &kp C_NEXT &trans
    &trans       &trans       &trans       &trans       &trans                &kp C_MUTE      &kp C_VOL_DN   &kp C_VOL_UP &trans     &trans
                           	 &kp LGUI     &trans       &kp SPACE             &kp RET         &trans         &kp RALT
                         >;
