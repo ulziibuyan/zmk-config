@@ -84,9 +84,7 @@
 	    label = "TAP_DANCE_RT0";
 	    #binding-cells = <0>;
             tapping-term-ms = <TAP_SPEED>;
-            bindings = <
-	        &kp f &kp F &kp F &kp F &bootloader
-	      >;
+            bindings = <&kp f>, <&kp F>, <&kp F>, <&kp F>, <&bootloader>;
             };
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
@@ -94,7 +92,6 @@
             #binding-cells = <0>; 
             tapping-term-ms = <TAP_SPEED>; 
             bindings = <&kp TAB>, <&kp ESC>;
-
             }; 
         td1: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
