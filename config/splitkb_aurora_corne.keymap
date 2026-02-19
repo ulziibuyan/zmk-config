@@ -79,7 +79,7 @@
 
 
     behaviors{
-	tap_RT0: tap_dance_RT0 {
+	td_RT0: tap_dance_RT0 {
 	    compatible = "zmk,behavior-tap-dance";
 	    label = "TAP_DANCE_RT0";
 	    #binding-cells = <0>;
