@@ -78,7 +78,29 @@
 / {
 
 
-    behaviors{
+    behaviors {
+        hml: home_row_mod_left {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            require-prior-idle-ms = <150>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <RIGHT_KEYS THUMB_KEYS>; // List of keys on the right side of the keyboard
+           hold-trigger-on-release;
+        };
+        hmr: home_row_mod_right {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            require-prior-idle-ms = <150>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <LEFT_KEYS THUMB_KEYS>; // List of keys on the left side of the keyboard
+            hold-trigger-on-release;
+        };
 	td_RT0: tap_dance_RT0 {
 	    compatible = "zmk,behavior-tap-dance";
 	    label = "TAP_DANCE_RT0";
@@ -95,7 +117,7 @@
             tapping-term-ms = <TAP_SPEED>;
             bindings = <&kp Y>, <&kp Y>,
                        <&kp Y>, <&kp Y>,
-			<&bootloader>;
+		       <&bootloader>;
             };
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
@@ -355,7 +377,10 @@
 //                        | GUI | LWR | SPC |         | ENT | RSE  | ALT |
                         bindings = <
    TD_SCLN  TD_COMM TD_DOT &kp P &td_LT0                 &td_RT0 &kp G  &kp C     &kp R   &kp L
-   &kp A    &kp O   &kp E  &kp U &kp I                   &kp D &kp H  &kp T     &kp N   &kp S
+
+   &hml LGUI A &hml LALT O &hml LSHIFT E &hml LCTRL U &kp I
+   &kp D &hmr RCTRL H &hmr RSHIFT T &hmr RALT N &hmr RGUI S 
+
    TD_QUOTE TD_ARR  &kp J  &kp K &kp X                   &kp B &kp M  &kp W     &kp V   &kp Z
                    TD_ALT &mo 1 TD_SPC                  TD_SPC &mo 2  &kp RIGHT_META
                         >;
