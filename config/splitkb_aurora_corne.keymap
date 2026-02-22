@@ -378,9 +378,9 @@
                         bindings = <
    TD_SCLN  TD_COMM TD_DOT &kp P &td_LT0                 &td_RT0 &kp G  &kp C     &kp R   &kp L
 
-   &hml A LGUI &hml O LALT &hml E LSHIFT &hml U LCTRL &kp I
-   &kp D &hmr H RCTRL &hmr T RSHIFT &hmr N RALT &hmr S RGUI
-   
+   &hml LGUI A &hml LALT O &hml LSHIFT E &hml LCTRL U &kp I
+   &kp D &hmr RCTRL H &hmr RSHIFT T &hmr RALT N &hmr RGUI S 
+
    TD_QUOTE TD_ARR  &kp J  &kp K &kp X                   &kp B &kp M  &kp W     &kp V   &kp Z
                    TD_ALT &mo 1 TD_SPC                  TD_SPC &mo 2  &kp RIGHT_META
                         >;
