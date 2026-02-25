@@ -123,7 +123,7 @@
 	  compatible = "zmk,behavior-tap-dance";
 	  label = "TAP_DANCE_BTCLEAR";
 	  #binding-cells = <0>;
-	  tapping-term = <TAP_SPEED>;
+	  tapping-term-ms = <TAP_SPEED>;
 	  bindings = <&none>, <&none>,
 	             <&none>, <&none>,
 		     <&bt BT_CLR>;
