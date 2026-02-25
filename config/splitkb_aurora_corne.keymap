@@ -391,7 +391,7 @@
    &kp D &hmr RCTRL H &hmr RSHIFT T &hmr RALT N &hmr RGUI S 
 
    TD_QUOTE TD_ARR  &kp J  &kp K &kp X                   &kp B &kp M  &kp W     &kp V   &kp Z
-                   TD_ALT &mo 1 TD_SPC                  TD_SPC &mo 2  &kp RIGHT_META
+                    &mo 3 &mo 1 TD_SPC                  TD_SPC &mo 2  &kp RIGHT_META
                         >;
 		  sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
                 };
@@ -419,7 +419,7 @@
    &kp LBKT    &kp LBRC     &kp RBRC     &kp LPAR    &kp EQUAL       &kp STAR        &kp RPAR        &kp PLUS        &kp RBKT        &kp EXCL  
    &kp TILDE   &kp PRCNT    &kp GRAVE    TD_SLSH     TD_ATCAT        &rgb_ug RGB_SAI &rgb_ug RGB_BRI &rgb_ug RGB_BRD &rgb_ug RGB_SAD &rgb_ug RGB_TOG
    &kp DLLR    &kp AMPS     &kp HASH     TD_MINUS    TD_BSLS         &trans          &trans          &trans          &trans          &trans
-                    	    &trans       &trans      &trans          &trans          &trans          &bt
+                    	    &trans       &trans      &trans          &trans          &trans          &trans
                         >;
                 };
 
