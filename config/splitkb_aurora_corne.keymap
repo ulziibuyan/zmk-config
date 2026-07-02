@@ -139,7 +139,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
-            bindings = <&mo>, TD_SPC;
+            bindings = <&mo>, <TD_SPC>;
         };
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
@@ -406,7 +406,7 @@
    &hml LGUI A &hml LALT O &hml LSHIFT E &hml LCTRL U &kp I
    &kp D &hmr RCTRL H &hmr RSHIFT T &hmr RALT N &hmr RGUI S
 
-   TD_QUOTE TD_ARR  &kp J  &kp K &kp X   &kp B &kp M  &kp W  &kp V   &kp Z
+   TD_QUOTE TD_ARR  &kp J  &kp K &kp X   &kp B &kp M  &kp W  &kp V  &kp Z
                  &mo BT &mo NAV TD_SPC   &ltd rh0_layer 0 &mo SYM &mkp MCLK
                         >;
 		  sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
