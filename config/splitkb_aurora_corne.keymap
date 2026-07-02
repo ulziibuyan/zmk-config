@@ -13,10 +13,12 @@
 #include "include/key-index.h"
 
 #define BASE 0
-#define NAV  1
-#define SYM  2
-#define BT   3
-#define GAME 4
+#define rh0-layer 1
+#define lh0-layer 2
+#define NAV  3
+#define SYM  4
+#define BT   5
+#define GAME 6
 
 // TAP_DANCE settings
 #define TAP_SPEED 200
@@ -365,7 +367,7 @@
             bindings = <&kp TAB>;
         };
         combo_gaming_layer_toggle {
-            key-positions = <LH0 LH2 LM4>;
+            key-positions = <LH0 LH2 LT4>;
             bindings = <&tog GAME>;
         };
 	combo_studio_unlock {
@@ -399,26 +401,26 @@
    &kp D &hmr RCTRL H &hmr RSHIFT T &hmr RALT N &hmr RGUI S
 
    TD_QUOTE TD_ARR  &kp J  &kp K &kp X                   &kp B &kp M  &kp W     &kp V   &kp Z
-                    &mo 3 &mo 1 TD_SPC                   TD_SPC &mo 2 &mkp MCLK
+                 &mo BT &mo NAV TD_SPC                   &lt rh0-layer SPACE &mo SYM &mkp MCLK
                         >;
 		  sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
                 };
-/*		thumb_layer {
+		right_thumb_layer {
 		  bindings = <
 // ╭─────────────────────────────────────────────────╮   ╭─────────────────────────────────────────────────╮
 // │         │         │         │         │         │   │         │         │         │         │         │
-       ___       ___   &kp UP        ___       ___           ___       ___        &kp UP   ___       ___
+       ___       ___       ___       ___       ___           ___       ___      &kp UP   &kp BKSP    ___
 // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
 // │         │         │         │         │         │   │         │         │         │         │         │
-       ___   &kp LEFT  &kp DOWN  &kp RIGHT     ___           ___      &kp LEFT  &kp DOWN &kp RIGHT   ___
+       ___        ___      ___       ___       ___           ___     &kp LEFT  &kp DOWN &kp RIGHT    ___
 // ├─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────┤
 // │         │         │         │         │         │   │         │         │         │         │         │
        ___       ___       ___       ___       ___           ___       ___       ___       ___       ___
 // ╰─────────┼─────────┼─────────┼─────────┼─────────┤   ├─────────┼─────────┼─────────┼─────────┼─────────╯
-                           ___       ___       ___           ___       ___       ___
+                           ___       ___     &kp RET         ___       ___       ___
 //                     ╰─────────────────────────────╯   ╰─────────────────────────────╯
 		  >;
-		};  */
+		};
 
                 lower_layer {
 // -----------------------------------------------------------------------------------------
