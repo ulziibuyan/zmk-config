@@ -134,6 +134,13 @@
 	             <&none>, <&none>,
 		     <&bt BT_CLR>;
 	  };
+        ltd: layer_tap_dance {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&mo>, TD_SPC;
+        };
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_0";
@@ -218,7 +225,6 @@
             tapping-term-ms = <TAP_SPEED>;
             bindings = <&kp GRAVE>, <&kp TILDE>;
             };
-
         td12: tap_dance_12 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_12";
@@ -370,11 +376,11 @@
             key-positions = <LH0 LH2 LT4>;
             bindings = <&tog GAME>;
         };
-	combo_studio_unlock {
-	    layers = <3>;
-	    key-positions = <RB4 RB1 LB1>;
-	    bindings = <&studio_unlock>;
-	};
+    	combo_studio_unlock {
+    	    layers = <3>;
+    	    key-positions = <RB4 RB1 LB1>;
+    	    bindings = <&studio_unlock>;
+    	};
     };
 
     // LAYERS
@@ -400,11 +406,12 @@
    &hml LGUI A &hml LALT O &hml LSHIFT E &hml LCTRL U &kp I
    &kp D &hmr RCTRL H &hmr RSHIFT T &hmr RALT N &hmr RGUI S
 
-   TD_QUOTE TD_ARR  &kp J  &kp K &kp X                   &kp B &kp M  &kp W     &kp V   &kp Z
-                 &mo BT &mo NAV TD_SPC                   &lt rh0_layer TD_SPC &mo SYM &mkp MCLK
+   TD_QUOTE TD_ARR  &kp J  &kp K &kp X   &kp B &kp M  &kp W  &kp V   &kp Z
+                 &mo BT &mo NAV TD_SPC   &ltd rh0_layer 0 &mo SYM &mkp MCLK
                         >;
 		  sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
                 };
+
 		right_thumb_layer {
 		  bindings = <
 // ╭─────────────────────────────────────────────────╮   ╭─────────────────────────────────────────────────╮
@@ -445,13 +452,13 @@
 // | F11    |  F1  |  F2 |  F3 |  F4 |  F5 |            | LFT | DWN |  UP | RGT |     |      |
 // | SHFT   |  F6  |  F7 |  F8 |  F9 |  F10|            |HOME | PGDN| PGUP| END |     |      |
 //                       |     |     |     |            |     |     |     |
-                        bindings = <
+            bindings = <
    &seven_lbkt   &five_lbrc  &three_rbrc &one_lpar   &nine_equal          &zero_s    &two_par    &four_pl    &six_rbkt   &eight_exlm
    &kp F1        &kp F2      &kp F3      &kp F4      &kp F5               &kp LEFT   &kp DOWN    &kp UP      &kp RIGHT   &trans
    &kp F6        &kp F7      &kp F8      &kp F9      &kp F10              &kp HOME   &kp PG_DN   &kp PG_UP   &kp END     &trans
                           	 &trans      &trans      &trans               &trans     &trans      &trans
-                        >;
-                };
+            >;
+        };
 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
