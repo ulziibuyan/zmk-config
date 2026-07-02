@@ -13,8 +13,8 @@
 #include "include/key-index.h"
 
 #define BASE 0
-#define rh0-layer 1
-#define lh0-layer 2
+#define rh0_layer 1
+#define lh0_layer 2
 #define NAV  3
 #define SYM  4
 #define BT   5
@@ -401,7 +401,7 @@
    &kp D &hmr RCTRL H &hmr RSHIFT T &hmr RALT N &hmr RGUI S
 
    TD_QUOTE TD_ARR  &kp J  &kp K &kp X                   &kp B &kp M  &kp W     &kp V   &kp Z
-                 &mo BT &mo NAV TD_SPC                   &lt rh0-layer SPACE &mo SYM &mkp MCLK
+                 &mo BT &mo NAV TD_SPC                   &lt rh0_layer SPACE &mo SYM &mkp MCLK
                         >;
 		  sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
                 };
